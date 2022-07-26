@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* ----- Root variables ----- */
+:root {
+    --primary-color: rgb(250, 8, 129);
+    --interact-color: #adadad;
+}
+
+* {
+    font-family: Varela Round;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+}
+
+/* ----- Overview page ----- */
+.container {
+    display: grid;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+.side {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 12px;
+}
+
+aside {
+    height: 100vh;
+    background-color: white
+}
+
+aside .ov-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.ov-top a {
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+} 
+
+.logo .gilde {
+    color: var(--primary-color);
+}
+
+.logo .time {
+    color: rgb(201, 73, 233);
+}
+
+.logo .registration {
+    color: blueviolet;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+.sidebar h3 {
+    font-weight: 500;
+}
+
+.sidebar a {
+    display: flex;
+    color: var(--primary-color);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+.sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+.sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+.sidebar a.active {
+    background: rgb(250, 216, 242);
+    margin-left: 0;
+}
+
+.sidebar a.active:before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.sidebar a.active span {
+    margin-left: calc(1rem - 3px);
+}
+
+.sidebar a:hover {
+    color: var(--primary-color);
+}
+
+.sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+/*Resgis*/
+.timedata form {
+    max-width: 550px;
+    width: 90%;
+    background-color: white;
+    margin-bottom: 10%;
+    padding: 40px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.timedata label {
+    display: block;
+    margin: 20px 0;
+}
+
+.timedata input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.timedata textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+}
